@@ -1,5 +1,9 @@
 require 'sinatra'
 
+before do
+  content_type 'text/plain'
+end
+
 get '/' do
-    "Hello World!"
+  "Welcome to the Tranzit API!"
 end
