@@ -10,6 +10,11 @@ before do
     content_type 'application/json', 'charset' => 'utf-8'
 end
 
+not_found do
+    content_type 'text/plain'
+    'Not found'
+end
+
 get '/' do
     content_type 'text/plain'
     "Welcome to the Tranzit API!"
