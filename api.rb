@@ -30,7 +30,7 @@ get '/departures/:stationName' do
     # Read mobile MVG departure website
     page = Nokogiri::HTML(open("http://www.mvg-live.de/ims/dfiStaticAnzeige.svc?haltestelle=#{param}&ubahn=checked&bus=checked&tram=checked&sbahn=checked"))
     
-    # Create departure dictionary
+    # Create departure array
     resp = []
     page.search('//span').remove
     page.xpath('//tr[starts-with(@class,"row")]').each do |departure|
@@ -40,6 +40,8 @@ get '/departures/:stationName' do
         minutes = departure.css('td.inMinColumn')[0].text.to_i
         resp << {:line => "#{line}", :destination => "#{destination}", :minutes => minutes}
     end
+    
+    resp.sort! {|a, b|  a[:minutes] <=> b[:minutes]}
     
     # Return JSON formatted dictionary
     resp.to_json
