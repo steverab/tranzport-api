@@ -37,8 +37,8 @@ get '/departures/:stationName' do
         line = departure.css('td.lineColumn')[0].text
         destination = departure.css('td.stationColumn')[0].text
         destination = destination.strip_control_characters
-        minutes = departure.css('td.inMinColumn')[0].text
-        resp << {:line => "#{line}", :destination => "#{destination}", :minutes => "#{minutes}"}
+        minutes = departure.css('td.inMinColumn')[0].text.to_i
+        resp << {:line => "#{line}", :destination => "#{destination}", :minutes => minutes}
     end
     
     # Return JSON formatted dictionary
