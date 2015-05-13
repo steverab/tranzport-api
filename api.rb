@@ -17,7 +17,7 @@ end
 
 get '/' do
     content_type 'text/plain'
-    "Welcome to the Tranzit API!"
+    "Welcome to the Tranzport API!"
 end
 
 get '/departures' do
