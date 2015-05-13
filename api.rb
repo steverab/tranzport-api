@@ -20,9 +20,9 @@ get '/' do
     "Welcome to the Tranzit API!"
 end
 
-get '/departures/:stationName' do
+get '/departures' do
     # Convert departure station from UTF-8 to Latin-1
-    convDep = Iconv.conv('iso-8859-1', 'utf-8', params[:stationName])
+    convDep = Iconv.conv('iso-8859-1', 'utf-8', params['station'])
     
     # URL-encode the converted departure station
     param = CGI::escape(convDep)
