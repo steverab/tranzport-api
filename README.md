@@ -1,6 +1,6 @@
 # Tranzport-API
 
-A simple departures API for Munich's public transportation.
+A simple departures API for Munich's public transportation system.
 
 ## API
 
@@ -16,83 +16,103 @@ Base URL: `https://tranzport-api.herokuapp.com`
 ```json
 
 [
-  { "destination" : "Flughafen München",
+  { 
+    "destination" : "Flughafen München",
     "line" : "S8",
     "minutes" : 0
   },
-  { "destination" : "Grafrath",
+  { 
+    "destination" : "Grafrath",
     "line" : "S4",
     "minutes" : 0
   },
-  { "destination" : "Freising/Flughafen München",
+  { 
+    "destination" : "Freising/Flughafen München",
     "line" : "S1",
     "minutes" : 1
   },
-  { "destination" : "Klinikum Großhadern",
+  { 
+    "destination" : "Klinikum Großhadern",
     "line" : "U6",
     "minutes" : 2
   },
-  { "destination" : "Tierpark (Alemannenstr)",
+  { 
+    "destination" : "Tierpark (Alemannenstr)",
     "line" : "52",
     "minutes" : 2
   },
-  { "destination" : "Ostbahnhof",
+  { 
+    "destination" : "Ostbahnhof",
     "line" : "S1",
     "minutes" : 2
   },
-  { "destination" : "Herrsching",
+  { 
+    "destination" : "Herrsching",
     "line" : "S8",
     "minutes" : 3
   },
-  { "destination" : "Ebersberg",
+  { 
+    "destination" : "Ebersberg",
     "line" : "S4",
     "minutes" : 4
   },
-  { "destination" : "Fürstenried West",
+  { 
+    "destination" : "Fürstenried West",
     "line" : "U3",
     "minutes" : 5
   },
-  { "destination" : "Garching-Forschungszentrum",
+  { 
+    "destination" : "Garching-Forschungszentrum",
     "line" : "U6",
     "minutes" : 5
   },
-  { "destination" : "Moosach",
+  { 
+    "destination" : "Moosach",
     "line" : "U3",
     "minutes" : 6
   },
-  { "destination" : "Petershausen",
+  { 
+    "destination" : "Petershausen",
     "line" : "S2",
     "minutes" : 7
   },
-  { "destination" : "Holzkirchen",
+  { 
+    "destination" : "Holzkirchen",
     "line" : "S3",
     "minutes" : 7
   },
-  { "destination" : "Tierpark (Alemannenstr)",
+  { 
+    "destination" : "Tierpark (Alemannenstr)",
     "line" : "52",
     "minutes" : 8
   },
-  { "destination" : "Starnberg",
+  { 
+    "destination" : "Starnberg",
     "line" : "S6",
     "minutes" : 9
   },
-  { "destination" : "Münchner Freiheit",
+  { 
+    "destination" : "Münchner Freiheit",
     "line" : "U6",
     "minutes" : 11
   },
-  { "destination" : "Höllriegelskreuth",
+  { 
+    "destination" : "Höllriegelskreuth",
     "line" : "S7",
     "minutes" : 11
   },
-  { "destination" : "Klinikum Großhadern",
+  { 
+    "destination" : "Klinikum Großhadern",
     "line" : "U6",
     "minutes" : 12
   },
-  { "destination" : "Kreuzstraße",
+  { 
+    "destination" : "Kreuzstraße",
     "line" : "S7",
     "minutes" : 12
   },
-  { "destination" : "Ostbahnhof",
+  { 
+    "destination" : "Ostbahnhof",
     "line" : "S6",
     "minutes" : 13
   }
