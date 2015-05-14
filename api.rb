@@ -15,7 +15,7 @@ end
 
 not_found do
   content_type 'text/plain'
-  '404 - Not found'
+  '404 - Not Found'
 end
 
 error 401 do
@@ -25,12 +25,12 @@ end
 
 error 403 do
   content_type 'text/plain'
-  '403 - Permission denied'
+  '403 - Forbidden'
 end
 
 error 426 do
   content_type 'text/plain'
-  '426 - Upgrade required'
+  '426 - Upgrade Required'
 end
 
 get '/' do
