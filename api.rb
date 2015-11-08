@@ -55,28 +55,28 @@ get '/departures' do
     line = departure.css('td.lineColumn')[0].text
     destination = departure.css('td.stationColumn')[0].text
     destination = destination.strip_control_characters
-    destination_shorted = ""
+    destination_short = ""
 
     if destination == "München Flughafen Terminal"
-      destination_shorted = "Flughafen"
+      destination_short = "Flughafen"
     elsif destination.index('-') != nil
       if destination.index(' ') != nil
-        destination_shorted = destination[0..destination.index('-')+2] + "."
+        destination_short = destination[0..destination.index('-')+2] + "."
       else
-        destination_shorted = destination[0..destination.index('-')+1] + "."
+        destination_short = destination[0..destination.index('-')+1] + "."
       end
     elsif destination.index(' ') != nil
       if destination.index('(') != nil
-        destination_shorted = destination[0..destination.index(' ')+2] + ".)"
+        destination_short = destination[0..destination.index(' ')+2] + ".)"
       else
-        destination_shorted = destination[0..destination.index(' ')+1] + "."
+        destination_short = destination[0..destination.index(' ')+1] + "."
       end
     else
-      destination_shorted = destination
+      destination_short = destination
     end
 
     minutes = departure.css('td.inMinColumn')[0].text.to_i
-    resp << {:line => "#{line}", :destination => "#{destination}", :destination_shorted => "#{destination_shorted}", :minutes => minutes}
+    resp << {:line => "#{line}", :destination => "#{destination}", :destination_short => "#{destination_short}", :minutes => minutes}
   end
 
   resp.sort! {|a, b|  a[:minutes] <=> b[:minutes]}
